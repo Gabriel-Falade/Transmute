@@ -3,10 +3,14 @@ Data Alchemist - Flask API
 Serves knowledge graph data to frontend
 """
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import json
 import os
+
+# Import wiki and chatbot functions
+from generate_wiki import generate_wiki_summary, load_graph, load_documents
+from chatbot import answer_question
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend access
@@ -96,6 +100,46 @@ def get_metrics():
     except FileNotFoundError:
         return jsonify({"error": "Metrics not found. Run metrics.py first."}), 404
 
+@app.route('/api/wiki/generate', methods=['POST'])
+def generate_wiki():
+    """Generate Wikipedia-style summary from graph"""
+    try:
+        graph = load_graph()
+        documents = load_documents()
+
+        wiki_content = generate_wiki_summary(graph, documents)
+
+        # Save to file
+        with open('wiki.md', 'w', encoding='utf-8') as f:
+            f.write(wiki_content)
+
+        return jsonify({
+            'content': wiki_content,
+            'length': len(wiki_content),
+            'status': 'success'
+        })
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/wiki/chat', methods=['POST'])
+def chat():
+    """RAG chatbot for document Q&A"""
+    try:
+        data = request.get_json()
+        question = data.get('question', '')
+        chat_history = data.get('chat_history', [])
+
+        if not question:
+            return jsonify({'error': 'No question provided'}), 400
+
+        result = answer_question(question, chat_history)
+
+        return jsonify(result)
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
@@ -116,7 +160,9 @@ def index():
             "/api/documents": "Get all processed documents",
             "/api/insights": "Get contradictions and obsolete documents",
             "/api/stats": "Get overall statistics",
-            "/api/metrics": "Get sustainability metrics (NEW!)",
+            "/api/metrics": "Get sustainability metrics",
+            "/api/wiki/generate": "Generate Wikipedia-style summary (POST)",
+            "/api/wiki/chat": "Ask questions about documents (POST)",
             "/api/health": "Health check"
         },
         "usage": "Visit http://localhost:5000/api/graph to get started"
@@ -127,12 +173,14 @@ if __name__ == '__main__':
     print("=" * 60)
     print("Starting server on http://localhost:5000")
     print("\nAvailable endpoints:")
-    print("  - GET /api/graph      - Complete knowledge graph")
-    print("  - GET /api/documents  - All documents")
-    print("  - GET /api/insights   - Contradictions & obsolete docs")
-    print("  - GET /api/stats      - Statistics")
-    print("  - GET /api/metrics    - Sustainability metrics")
-    print("  - GET /api/health     - Health check")
+    print("  - GET  /api/graph         - Complete knowledge graph")
+    print("  - GET  /api/documents     - All documents")
+    print("  - GET  /api/insights      - Contradictions & obsolete docs")
+    print("  - GET  /api/stats         - Statistics")
+    print("  - GET  /api/metrics       - Sustainability metrics")
+    print("  - POST /api/wiki/generate - Generate wiki summary")
+    print("  - POST /api/wiki/chat     - Chat with documents")
+    print("  - GET  /api/health        - Health check")
     print("\nPress CTRL+C to stop")
     print("=" * 60)
 
