@@ -69,7 +69,7 @@ const Visualize = () => {
               <div className="drawer-content">
                 <h3>{selectedNode.label}</h3>
                 <div className="stat-row">
-                  <span>Impact Score</span>
+                  <span>Impact Score: </span>
                   <strong>{selectedNode.impact}/5</strong>
                 </div>
                 <p className="node-desc">

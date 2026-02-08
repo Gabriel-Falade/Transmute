@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: center;
   background-color: var(--bg-color);
-  padding-top: 80px; /* Offset for fixed navbar */
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
 }
 
 .upload-container {
@@ -13,6 +15,8 @@
   text-align: center;
   font-family: 'TASA Orbiter Display', sans-serif;
   animation: fadeIn 1.2s ease-out;
+  position: relative;
+  z-index: 2;
 }
 
 .upload-header h2 {
@@ -28,51 +32,347 @@
   color: var(--text-color);
 }
 
-/* The Drop Zone */
-.drop-zone {
-  border: 1px dashed var(--text-color);
-  background: rgba(var(--bg-rgb), 0.05);
-  padding: 3rem;
+/* Cauldron Container */
+.cauldron-container {
   position: relative;
-  transition: all 0.3s ease;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The Magical Cauldron */
+.cauldron {
+  position: relative;
+  width: 300px;
+  height: 320px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
 }
 
-.drop-zone.dragging {
-  background: var(--text-color);
-  color: var(--bg-color);
-  border-style: solid;
+.cauldron-rim {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 30px;
+  background: linear-gradient(180deg, #4a4a4a 0%, #2a2a2a 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
-.drop-zone-content .upload-icon {
+.cauldron-body {
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 200px;
+  background: linear-gradient(180deg, #3a3a3a 0%, #1a1a1a 100%);
+  border-radius: 0 0 130px 130px;
+  box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Potion inside cauldron */
+.potion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(138, 43, 226, 0.3) 0%, rgba(75, 0, 130, 0.6) 100%);
+  border-radius: 0 0 130px 130px;
+  transition: all 0.5s ease;
+}
+
+.cauldron.brewing .potion {
+  background: linear-gradient(180deg, rgba(138, 43, 226, 0.6) 0%, rgba(147, 51, 234, 0.8) 100%);
+  animation: bubbleGlow 2s ease-in-out infinite;
+}
+
+@keyframes bubbleGlow {
+  0%, 100% {
+    box-shadow: 0 -10px 40px rgba(147, 51, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 -10px 60px rgba(147, 51, 234, 0.8);
+  }
+}
+
+/* Bubbles */
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(147, 51, 234, 0.4));
+  border-radius: 50%;
+  animation: rise 3s ease-in infinite;
+  opacity: 0.7;
+}
+
+.bubble.b1 { left: 20%; animation-delay: 0s; }
+.bubble.b2 { left: 40%; animation-delay: 0.5s; width: 15px; height: 15px; }
+.bubble.b3 { left: 60%; animation-delay: 1s; width: 25px; height: 25px; }
+.bubble.b4 { left: 80%; animation-delay: 1.5s; width: 18px; height: 18px; }
+.bubble.b5 { left: 50%; animation-delay: 2s; }
+
+@keyframes rise {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    bottom: 120px;
+    opacity: 0;
+  }
+}
+
+/* Drop Zone Content */
+.drop-zone-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.cauldron-icon,
+.brewing-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.brewing-icon {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
 }
 
 .drop-zone-content p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
 }
 
 .drop-zone-content span {
   font-size: 0.8rem;
   opacity: 0.5;
+  color: var(--text-color);
 }
 
+/* Cauldron States */
+.cauldron.ready {
+  transform: scale(1.05);
+}
+
+.cauldron.ready .cauldron-rim {
+  box-shadow: 0 4px 20px rgba(147, 51, 234, 0.6);
+}
+
+/* File Input */
 .file-input {
   position: absolute;
   inset: 0;
   opacity: 0;
   cursor: pointer;
+  z-index: 5;
 }
 
+/* Falling Ingredients */
+.ingredient {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(147, 51, 234, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 2px solid rgba(147, 51, 234, 0.5);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ingredient.falling {
+  animation: fallIntoPotion 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.ingredient.dissolved {
+  opacity: 0;
+}
+
+@keyframes fallIntoPotion {
+  0% {
+    top: -50px;
+    opacity: 1;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  70% {
+    top: 250px;
+    opacity: 1;
+    transform: translateX(-50%) rotate(360deg);
+  }
+  100% {
+    top: 280px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5) rotate(360deg);
+  }
+}
+
+/* Magic Particles */
+.magic-particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(147, 51, 234, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  animation: particleFloat 2s ease-out infinite;
+  animation-delay: var(--delay);
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc((var(--delay, 0s) * 100px) - 50px),
+      -150px
+    ) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Spell Complete */
+.spell-complete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  text-align: center;
+  animation: spellBurst 0.6s ease-out;
+}
+
+.spell-burst {
+  font-size: 5rem;
+  animation: burstScale 0.6s ease-out;
+}
+
+@keyframes burstScale {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.spell-complete p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-shadow: 0 0 20px rgba(147, 51, 234, 0.8);
+}
+
+/* Upload Footer */
 .upload-footer {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   font-size: 0.7rem;
   opacity: 0.4;
   text-transform: uppercase;
   color: var(--text-color);
+}
+
+/* Ingredients List */
+.ingredients-list {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(147, 51, 234, 0.1);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.ingredients-list h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.ingredients-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients-list li {
+  color: var(--text-color);
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+  background: rgba(147, 51, 234, 0.05);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
