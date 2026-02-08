@@ -14,7 +14,7 @@ const Hero = () => {
         </h1>
         <p className="hero-subtitle">
           Advanced analytics and visualization for the modern web.
-          Built with precision, powered by alchemy.
+          Built with precision, powered by transformation.
         </p>
         <div className="hero-btns">
           <button className="btn-primary" onClick={() => navigate('/upload')}>

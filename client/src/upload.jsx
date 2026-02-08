@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './upload.css';
 
 const Upload = ({ onThemeToggle }) => {
+  const navigate = useNavigate();
   const [isDragging, setIsDragging] = useState(false);
   const [isCasting, setIsCasting] = useState(false);
   const [ingredients, setIngredients] = useState([]);
   const [spellComplete, setSpellComplete] = useState(false);
+  const [uploadStatus, setUploadStatus] = useState('');
+  const [uploadError, setUploadError] = useState('');
 
   const handleDrag = (e) => {
     e.preventDefault();
@@ -29,12 +33,23 @@ const Upload = ({ onThemeToggle }) => {
     }
   };
 
-  const castSpell = (files) => {
+  const castSpell = async (files) => {
+    // Validate file type
+    const file = files[0]; // Get first file
+    if (!file.name.toLowerCase().endsWith('.zip')) {
+      setUploadError('Please upload a ZIP file');
+      return;
+    }
+
     // Switch to dark mode for spell casting
     const currentTheme = document.body.getAttribute('data-theme');
     if (currentTheme !== 'dark') {
       document.body.setAttribute('data-theme', 'dark');
     }
+
+    // Reset states
+    setUploadError('');
+    setUploadStatus('Preparing ingredients...');
 
     // Add ingredients (files) with animation
     const newIngredients = Array.from(files).map((file, idx) => ({
@@ -46,20 +61,48 @@ const Upload = ({ onThemeToggle }) => {
     setIngredients(prev => [...prev, ...newIngredients]);
     setIsCasting(true);
 
-    // Simulate spell completion
+    // Animation: files falling into cauldron
     setTimeout(() => {
       setIngredients(prev => prev.map(ing => ({ ...ing, falling: false })));
     }, 1500);
 
-    setTimeout(() => {
-      setSpellComplete(true);
-      setTimeout(() => {
-        setSpellComplete(false);
-        setIsCasting(false);
-      }, 3000);
-    }, 2000);
+    try {
+      // Upload file to backend
+      setUploadStatus('Transmuting documents...');
 
-    console.log("Spell cast with files:", files);
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('http://localhost:5000/api/upload', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Upload failed');
+      }
+
+      // Success!
+      setUploadStatus('Building knowledge graph...');
+
+      setTimeout(() => {
+        setSpellComplete(true);
+        setUploadStatus(`Spell complete! Processed ${data.documents_processed} documents`);
+
+        // Redirect to analytics after 3 seconds
+        setTimeout(() => {
+          navigate('/analytics');
+        }, 3000);
+      }, 1000);
+
+    } catch (error) {
+      console.error('Upload error:', error);
+      setUploadError(error.message || 'Failed to cast spell');
+      setIsCasting(false);
+      setSpellComplete(false);
+    }
   };
 
   return (
@@ -146,9 +189,23 @@ const Upload = ({ onThemeToggle }) => {
         </div>
 
         <div className="upload-footer">
-          <p>Supported: .zip, .pdf, .txt, .md</p>
-          <p>Max size: 50MB per file</p>
+          <p>Supported: ZIP files containing .md, .txt, .pdf</p>
+          <p>Max size: 50MB</p>
         </div>
+
+        {/* Upload Status */}
+        {uploadStatus && (
+          <div className="upload-status">
+            <p>{uploadStatus}</p>
+          </div>
+        )}
+
+        {/* Upload Error */}
+        {uploadError && (
+          <div className="upload-error">
+            <p>⚠️ {uploadError}</p>
+          </div>
+        )}
 
         {ingredients.length > 0 && !isCasting && (
           <div className="ingredients-list">

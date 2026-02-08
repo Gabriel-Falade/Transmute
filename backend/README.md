@@ -1,4 +1,4 @@
-# Data Alchemist - Backend
+# Transmute - Backend
 
 Transform dark data into interactive knowledge graphs with AI-powered insights.
 

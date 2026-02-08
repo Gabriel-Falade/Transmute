@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
         <div className="navbar-container"> 
-            <div className="nav-title">Data Alchemist</div>
+            <div className="nav-title">Transmute</div>
             
             <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
             <li><Link to="/">Home</Link></li>

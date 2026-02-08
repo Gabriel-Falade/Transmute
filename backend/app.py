@@ -1,5 +1,5 @@
 """
-Data Alchemist - Flask API
+Transmute - Flask API
 Serves knowledge graph data to frontend
 """
 
@@ -11,9 +11,13 @@ import os
 # Import wiki and chatbot functions
 from generate_wiki import generate_wiki_summary, load_graph, load_documents
 from chatbot import answer_question
+from upload_processor import process_upload
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend access
+
+# Configure upload settings
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB max file size
 
 # API Routes
 
@@ -140,12 +144,43 @@ def chat():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/upload', methods=['POST'])
+def upload_file():
+    """
+    Upload and process ZIP file containing documents
+    Runs complete pipeline: ingest → build_graph → analyze → metrics
+    """
+    try:
+        # Check if file is present
+        if 'file' not in request.files:
+            return jsonify({'error': 'No file provided'}), 400
+
+        file = request.files['file']
+
+        if file.filename == '':
+            return jsonify({'error': 'No file selected'}), 400
+
+        # Check file extension
+        if not file.filename.lower().endswith('.zip'):
+            return jsonify({'error': 'Only ZIP files are supported'}), 400
+
+        # Process the upload
+        result = process_upload(file)
+
+        if 'error' in result:
+            return jsonify(result), 400
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({'error': f'Upload failed: {str(e)}'}), 500
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
     return jsonify({
         "status": "healthy",
-        "service": "Data Alchemist API",
+        "service": "Transmute API",
         "version": "1.0.0"
     })
 
@@ -153,9 +188,10 @@ def health_check():
 def index():
     """API documentation"""
     return jsonify({
-        "service": "Data Alchemist API",
+        "service": "Transmute API",
         "version": "1.0.0",
         "endpoints": {
+            "/api/upload": "Upload ZIP file and process documents (POST)",
             "/api/graph": "Get complete knowledge graph with insights",
             "/api/documents": "Get all processed documents",
             "/api/insights": "Get contradictions and obsolete documents",
@@ -165,14 +201,15 @@ def index():
             "/api/wiki/chat": "Ask questions about documents (POST)",
             "/api/health": "Health check"
         },
-        "usage": "Visit http://localhost:5000/api/graph to get started"
+        "usage": "Upload a ZIP file to /api/upload to get started"
     })
 
 if __name__ == '__main__':
-    print("\nData Alchemist API Server")
+    print("\nTransmute API Server")
     print("=" * 60)
     print("Starting server on http://localhost:5000")
     print("\nAvailable endpoints:")
+    print("  - POST /api/upload        - Upload ZIP file (complete pipeline)")
     print("  - GET  /api/graph         - Complete knowledge graph")
     print("  - GET  /api/documents     - All documents")
     print("  - GET  /api/insights      - Contradictions & obsolete docs")

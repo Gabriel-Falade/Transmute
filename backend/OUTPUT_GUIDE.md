@@ -1,4 +1,4 @@
-# Data Alchemist - Complete Output Guide
+# Transmute - Complete Output Guide
 
 This document shows exactly what your backend returns at each stage.
 
@@ -242,7 +242,7 @@ This document shows exactly what your backend returns at each stage.
 ```json
 {
   "status": "healthy",
-  "service": "Data Alchemist API",
+  "service": "Transmute API",
   "version": "1.0.0"
 }
 ```

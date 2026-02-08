@@ -2,78 +2,203 @@
   "nodes": [
     {
       "id": "doc_1",
-      "label": "Project Alpha - Kickoff",
-      "date": "2024-01-15",
-      "content": "# Project Alpha - Kickoff\n**Date:** 2024-01-15\n\n## Overview\nWe're launching Project Alpha with a microservices architecture. The team has decided to use MongoDB for primary data storage due to its flexibility with unstructured data.\n\n## Key Decisions\n- **Database:** MongoDB (document store)\n- **Architecture:** Microservices\n- **Deployment:** AWS ECS\n- **Timeline:** 6 months\n\n## Team\nEngineering lead: Sarah Chen\nProduct: Mike Davis\n\n## Budget\nInitial budget: $50,000 for infrastructure\n",
-      "word_count": 70,
-      "impact_score": 5
+      "label": "Athens Climate Action Plan 2023-2030",
+      "date": "2023-01-20",
+      "content": "# Athens Climate Action Plan 2023-2030\n**Date:** 2023-01-20\n**Department:** Environmental Sustainability Office\n**Author:** Director Maria Santos\n\n## City of Athens Comprehensive Climate Strategy\n\nAthens commits to becoming a **carbon-neutral city by 2030** through aggressive climate action.\n\n## Emissions Reduction Targets\n- **2025:** 30% reduction from 2020 baseline\n- **2027:** 60% reduction from 2020 baseline\n- **2030:** 100% carbon neutral (net-zero emissions)\n- **Renewable Energy:** 100% renewable electricity by 2028\n- **Transportation:** 50% of trips via sustainable transportation by 2030\n\n## Key Initiatives\n\n### Transportation\n- Expand public transit network (3 new bus routes by 2024)\n- Build 50 miles of protected bike lanes by 2026\n- Electric vehicle charging stations at all public buildings\n- Ban sale of gas-powered vehicles within city limits by 2028\n- Free public transit for students and seniors\n\n### Buildings & Energy\n- All new buildings must be net-zero energy by 2025\n- Retrofit 1,000 public buildings with solar panels\n- Require energy audits for all commercial buildings\n- Ban natural gas hookups in new construction (2024)\n- LED streetlight conversion (100% by 2024)\n\n### Waste & Recycling\n- Zero waste to landfills by 2030\n- Citywide composting program launch (2024)\n- Ban single-use plastics (2025)\n- Circular economy business incentives\n\n### Green Space\n- Plant 100,000 trees by 2030\n- Convert 20% of parking lots to green space\n- Urban gardens in every neighborhood\n- Protect all existing green spaces from development\n\n## Budget Commitment\n- $250M over 7 years from general fund\n- Apply for federal infrastructure grants\n- Green bonds for renewable energy projects\n- Public-private partnerships\n\n## Accountability\n- Annual public progress reports\n- Community climate action committee\n- Science-based targets verified by third parties\n- Mayor's office performance tied to climate goals\n\nAthens will be a national leader in urban climate action!\n",
+      "word_count": 302,
+      "impact_score": 9
     },
     {
       "id": "doc_2",
-      "label": "Security Policy Update",
-      "date": "2024-02-10",
-      "content": "# Security Policy Update\n**Date:** 2024-02-10\n\n## New Requirements\nAll services must implement:\n- OAuth 2.0 authentication\n- Encrypted data at rest\n- Regular security audits\n\n## Compliance\nWe need to be SOC 2 compliant by Q3 2024.\n\n## Team Changes\nNew security engineer: Alex Kumar (starts March 1)\n",
-      "word_count": 49,
-      "impact_score": 1
+      "label": "Athens Emergency Preparedness Plan",
+      "date": "2023-04-15",
+      "content": "# Athens Emergency Preparedness Plan\n**Date:** 2023-04-15\n**Department:** Emergency Management\n**Author:** Emergency Management Director John Williams\n\n## Comprehensive Emergency Response Framework\n\nAthens' emergency preparedness plan for natural disasters, public health emergencies, and civil emergencies.\n\n## Evacuation Procedures\n\n### Severe Weather (Tornadoes, Hurricanes)\n- **Shelter-in-Place:** Residents should shelter in basements or interior rooms\n- **Assembly Points:** Six designated community shelters (schools and community centers)\n- **Alert System:** Text alerts via CodeRED system (opt-in required)\n- **Evacuation Routes:** Highway 78 North, Highway 316 South\n- **Vulnerable Populations:** City will provide transportation to seniors and disabled\n\n### Flooding\n- **Flood Zones:** Residents in Zones A and B must evacuate immediately\n- **Sandbagging:** Free sandbags available at Public Works Department\n- **Water Shutoff:** Know location of main water shutoff valve\n- **Insurance:** Flood insurance strongly recommended\n\n### Extreme Heat\n- **Cooling Centers:** Public libraries open as cooling centers when temp exceeds 95\u00b0F\n- **Hydration:** Drink extra water, avoid alcohol and caffeine\n- **Check on Neighbors:** Especially elderly and those without AC\n- **Work Safely:** Take breaks if working outdoors\n\n## Emergency Supplies Checklist\n- 3-day supply of water (1 gallon per person per day)\n- Non-perishable food for 3 days\n- Flashlight and extra batteries\n- First aid kit\n- Battery-powered or hand-crank radio\n- Prescription medications (7-day supply)\n- Cash (ATMs may not work)\n- Important documents in waterproof container\n\n## Communication\n- **Emergency Line:** Call 911 for life-threatening emergencies\n- **Non-Emergency:** Call 311 for information\n- **Updates:** Monitor local TV and radio stations\n- **Social Media:** Follow @AthensEmergency on Twitter\n- **Website:** www.athensga.gov/emergency (fictional)\n\n## Community Preparedness\n- Neighborhood emergency response teams\n- Annual emergency preparedness fair (September)\n- Free CPR and first aid training\n- School-based disaster education programs\n\nStay informed, have a plan, and build an emergency kit!\n",
+      "word_count": 298,
+      "impact_score": 6
     },
     {
       "id": "doc_3",
-      "label": "Architecture Review - March",
-      "date": "2024-03-20",
-      "content": "# Architecture Review - March\n**Date:** 2024-03-20\n\n## Performance Issues\nAfter two months, we're seeing significant performance bottlenecks with our MongoDB setup. Query times have increased 300%.\n\n## New Recommendation\nThe team now recommends migrating to PostgreSQL with proper indexing. The \"flexibility\" of MongoDB has actually created schema chaos.\n\n## Action Items\n- Evaluate PostgreSQL migration cost\n- Prototype new schema design\n- Timeline: 2 month migration window\n\n**Note:** This contradicts our January decision but is necessary for scale.\n",
-      "word_count": 79,
-      "impact_score": 2
+      "label": "Affordable Housing Strategy 2023-2028",
+      "date": "2023-08-10",
+      "content": "# Affordable Housing Strategy 2023-2028\n**Date:** 2023-08-10\n**Department:** Housing & Community Development\n**Author:** Housing Director Karen Johnson\n\n## Athens Affordable Housing Crisis Response\n\nComprehensive strategy to address Athens' severe affordable housing shortage affecting working families.\n\n## Current Crisis\n- **Median Rent:** $1,450/month (up 40% since 2020)\n- **Affordability:** Only 15% of units affordable to median-income families\n- **Homelessness:** 450 individuals experiencing homelessness\n- **Displacement:** Gentrification forcing out long-time residents\n- **Student Impact:** UGA enrollment squeezing rental market\n\n## Production Goals\n- **Build:** 2,000 new affordable units by 2028\n- **Preserve:** Prevent loss of 500 existing affordable units\n- **Homelessness:** House all chronic homeless individuals by 2026\n- **Mixed-Income:** Require 15% affordable units in all new developments\n- **Land Bank:** Acquire land for affordable housing development\n\n## Funding Strategy\n- **City Investment:** $50M affordable housing fund\n- **Inclusionary Zoning:** Require affordable units in new developments\n- **Tax Incentives:** Property tax abatement for affordable housing developers\n- **Federal Grants:** Apply for HUD grants and tax credits\n- **Donations:** Encourage philanthropic investment\n\n## Tenant Protections\n- **Rent Control:** Consider rent stabilization for existing tenants\n- **Eviction Prevention:** Legal aid for tenants facing eviction\n- **Right to Return:** Allow displaced residents to return after redevelopment\n- **Anti-Discrimination:** Strengthen fair housing enforcement\n- **Tenant Union Support:** Support for tenant organizing\n\n## Development Priorities\n- **Location:** Near transit and jobs\n- **Mixed-Income:** Integrate affordable units in all neighborhoods\n- **Accessibility:** All units ADA compliant\n- **Green Building:** Energy-efficient construction to lower utilities\n- **Community Input:** Residents help design developments\n\n## Immediate Actions (2023-2024)\n- Establish affordable housing trust fund\n- Hire affordable housing program manager\n- Pass inclusionary zoning ordinance\n- Identify 10 sites for affordable development\n- Launch emergency rental assistance program\n\n## Opposition Expected\nSome property owners and developers oppose regulations, but housing is a human right and economic necessity for Athens to thrive.\n\nEvery resident deserves a safe, affordable place to call home.\n",
+      "word_count": 320,
+      "impact_score": 5
     },
     {
       "id": "doc_4",
-      "label": "Q1 Retrospective",
-      "date": "2024-04-05",
-      "content": "# Q1 Retrospective\n**Date:** 2024-04-05\n\n## What Went Well\n- Microservices architecture is working smoothly\n- Team collaboration is strong\n- Security implementation on track\n\n## Challenges\n- Database performance concerns\n- Deployment complexity higher than expected\n- Need better monitoring tools\n\n## Shoutouts\nGreat work by Sarah Chen on the API gateway!\nMike Davis crushed the product roadmap.\n",
-      "word_count": 59,
-      "impact_score": 2
+      "label": "Athens Transportation Master Plan 2024",
+      "date": "2024-01-25",
+      "content": "# Athens Transportation Master Plan 2024\n**Date:** 2024-01-25\n**Department:** Transportation & Public Works\n**Author:** Transportation Director Michael Brown\n\n## Vision: Multimodal Transportation Network\n\nComprehensive plan to reduce congestion, improve safety, and expand transportation choices.\n\n## Road Infrastructure Expansion\n- **Highway Widening:** Widen Highway 78 from 4 to 6 lanes\n- **Bypass Extension:** Extend Athens Perimeter Highway 10 miles\n- **New Roads:** 15 miles of new roads in growth areas\n- **Bridge Improvements:** Replace 8 aging bridges\n- **Intersection Upgrades:** 25 intersection improvements for traffic flow\n\n## Parking Expansion\n- **Downtown:** Build 2 new parking decks (1,500 spaces total)\n- **Park & Ride:** 3 new suburban park-and-ride facilities\n- **On-Street:** Add 500 new on-street parking spaces downtown\n- **Residential:** Require 2 parking spaces per new housing unit\n- **Commercial:** Increase parking minimums for new businesses\n\n## Public Transit Investment\n- **Bus Routes:** Reduce from 12 routes to 8 most profitable routes\n- **Frequency:** Maintain current 30-minute headways\n- **Fares:** Increase base fare from $1.75 to $2.50\n- **Operating Hours:** Reduce Sunday service to save costs\n- **Vehicles:** Replace aging bus fleet (20 diesel buses)\n\n## Bicycle Infrastructure\n- **Bike Lanes:** 10 miles of bike lanes (paint only, no protection)\n- **Shared Streets:** \"Share the Road\" signage on low-traffic streets\n- **Bike Racks:** Install 50 bike racks at city facilities\n- **Education:** Safety classes for cyclists on obeying traffic laws\n\n## Pedestrian Improvements\n- **Sidewalks:** Repair 100 damaged sidewalks\n- **Crosswalks:** Enhanced markings at 30 crosswalks\n- **Pedestrian Signals:** Upgrade 15 pedestrian signal buttons\n- **ADA Compliance:** Bring 200 curb ramps into ADA compliance\n\n## Funding ($400M over 10 years)\n- Federal highway funds: $200M\n- State transportation grants: $100M\n- Local sales tax: $80M\n- Parking revenues: $20M\n\n## Rationale\n- Population growth requires road capacity expansion\n- Cars remain primary transportation mode (85% of trips)\n- Economic development requires strong road network\n- Suburban growth areas need better highway access\n- Parking availability crucial for downtown businesses\n\nThis balanced approach serves all Athenians while prioritizing our primary transportation needs.\n",
+      "word_count": 339,
+      "impact_score": 9
     },
     {
       "id": "doc_5",
-      "label": "Emergency Budget Meeting",
-      "date": "2024-05-12",
-      "content": "# Emergency Budget Meeting\n**Date:** 2024-05-12\n\n## Budget Reduction\nDue to market conditions, Project Alpha budget is reduced to $30,000 (was $50,000).\n\n## Impact\n- Infrastructure migration delayed\n- 1 contractor position eliminated\n- AWS costs must be optimized immediately\n\n## Revised Timeline\nOriginal 6-month timeline now extended to 9 months.\n\n**This supersedes the January budget allocation.**\n",
-      "word_count": 57,
+      "label": "Market-Rate Housing Development Incentives",
+      "date": "2024-03-15",
+      "content": "# Market-Rate Housing Development Incentives\n**Date:** 2024-03-15\n**Department:** Economic Development\n**Author:** Economic Development Director Steven Park\n\n## Accelerating Housing Production Through Private Development\n\nNew incentive program to **encourage market-rate housing construction** and increase property tax base.\n\n## Developer Incentive Package\n- **Tax Abatement:** 10-year property tax abatement for new developments\n- **Fee Waivers:** Waive all impact fees and development fees\n- **Fast-Track Permitting:** 30-day approval process (vs. 90-day standard)\n- **Zoning Flexibility:** Density bonuses up to 50% above zoning limits\n- **Parking Reductions:** Reduce parking requirements by 30%\n\n## Priority Development Zones\n- **Downtown:** High-rise luxury apartments (up to 20 stories)\n- **East Athens:** Mixed-use developments with retail\n- **West Broad:** Upscale townhomes and condos\n- **Normaltown:** Infill development on vacant lots\n\n## Target Demographics\n- **Young Professionals:** 1-2 bedroom apartments $1,800-$2,500/month\n- **UGA Graduate Students:** Studio and 1-bedroom $1,400-$1,800/month\n- **Affluent Empty Nesters:** Luxury condos $3,000+/month\n- **Remote Workers:** Modern apartments with co-working spaces\n\n## Economic Benefits\n- **Property Tax:** Projected $15M annual increase in property tax revenue\n- **Construction Jobs:** 500+ construction jobs over 5 years\n- **Retail Growth:** New residents support downtown businesses\n- **Market Forces:** Increased supply will eventually moderate prices\n\n## Affordable Housing Approach\n- **No Mandates:** Mandatory affordable units reduce development feasibility\n- **Market Solution:** Increased supply will improve affordability over time\n- **Filtering Theory:** New luxury units free up older units for lower-income residents\n- **Economic Growth:** Priority is tax base growth to fund city services\n\n## Environmental Sustainability\n- Encourage LEED certification (not required)\n- Allow developers to meet green building standards flexibly\n- Streamline environmental review process\n\n## Opposition Response\nSome advocate for mandatory affordable units, but market-rate development:\n- Generates tax revenue for public services\n- Creates construction jobs\n- Attracts businesses and talent\n- Eventually increases overall housing supply\n\n## Development Pipeline\n- 15 projects in pre-development discussions\n- 3,500 new units projected over 5 years\n- $450M in private investment anticipated\n- Transforming Athens into modern, vibrant city\n\nLet the market work! Private development is the solution to our housing needs.\n",
+      "word_count": 343,
+      "impact_score": 4
+    },
+    {
+      "id": "doc_6",
+      "label": "Budget Reallocation: Climate Program Adjustments",
+      "date": "2024-05-20",
+      "content": "# Budget Reallocation: Climate Program Adjustments\n**Date:** 2024-05-20\n**Department:** City Manager's Office\n**Author:** City Manager Robert Thompson\n\n## Fiscal Responsibility: Climate Program Modifications\n\nDue to budget constraints and competing priorities, Athens must **scale back climate initiatives** and refocus on core services.\n\n## Budget Reductions\n- **Climate Budget:** Reduced from $250M to $75M (7-year total)\n- **Staff:** Eliminate 5 of 8 sustainability office positions\n- **Programs:** Sunset or postpone non-essential climate programs\n- **Timeline:** Carbon neutrality target moved from 2030 to 2040\n\n## Program Changes\n\n### Transportation (Reduced Priority)\n- **Bus Routes:** Postpone 3 new routes indefinitely\n- **Bike Lanes:** Reduce protected bike lane plan from 50 miles to 15 miles\n- **EV Charging:** Install only at municipal buildings (cut public locations)\n- **Gas Vehicle Ban:** Rescind 2028 gas vehicle ban ordinance\n\n### Buildings & Energy (Scaled Back)\n- **Solar Program:** Reduce public building solar from 1,000 to 150 buildings\n- **Retrofit Requirements:** Make commercial building audits voluntary\n- **Natural Gas Ban:** Reverse ban on gas hookups in new construction\n- **Streetlights:** Complete LED conversion but no smart grid upgrades\n\n### Waste (Delayed)\n- **Composting:** Postpone citywide composting to 2027\n- **Plastic Ban:** Delay single-use plastic ban to 2026\n- **Zero Waste:** Revise target to 50% waste reduction (from 100%)\n\n### Green Space (Limited)\n- **Tree Planting:** Reduce from 100,000 trees to 20,000 trees\n- **Parking Lot Conversion:** Cancelled - parking needed for downtown\n- **Urban Gardens:** Community-led only (no city funding)\n\n## Rationale\n- **Public Safety First:** Must prioritize police, fire, and emergency services\n- **Infrastructure Backlog:** Aging water/sewer systems need urgent investment\n- **Taxpayer Relief:** Cannot raise property taxes during economic uncertainty\n- **Realistic Goals:** Previous targets were overly ambitious\n- **State Preemption:** State legislature may override local climate policies anyway\n\n## Remaining Climate Efforts\n- Continue energy efficiency in municipal operations\n- Maintain LED streetlight program\n- Support volunteer environmental initiatives\n- Apply for state/federal climate grants (if available)\n- Educational programs in schools\n\n## Revised Goals\n- **2030:** 20% emissions reduction (from 30%)\n- **2035:** 40% emissions reduction (from 60%)\n- **2040:** 70% emissions reduction (carbon neutral goal removed)\n- **Renewable Energy:** 50% renewable by 2035 (from 100% by 2028)\n\n## Political Reality\nClimate action must balance environmental goals with:\n- Economic development and job creation\n- Affordable cost of living for residents\n- Practical implementation timelines\n- State and federal policy alignment\n\nAthens remains committed to environmental stewardship within realistic fiscal constraints.\n",
+      "word_count": 406,
+      "impact_score": 8
+    },
+    {
+      "id": "doc_7",
+      "label": "Updated Emergency Guidance: Extreme Heat Events",
+      "date": "2024-06-30",
+      "content": "# Updated Emergency Guidance: Extreme Heat Events\n**Date:** 2024-06-30\n**Department:** Emergency Management & Public Health\n**Author:** Joint Statement - Emergency Management & Health Dept\n\n## NEW GUIDANCE: Extreme Heat is a Major Emergency\n\nClimate change has made extreme heat Athens' **most dangerous weather threat**. Updated protocols reflect this reality.\n\n## Heat Emergency Classification\n\n### Heat Advisory (Replaces old guidance)\n- **Trigger:** Heat index 100-104\u00b0F\n- **Duration:** Expected to last 2+ days\n- **Action:** Open cooling centers, activate check-in systems\n\n### Excessive Heat Warning (NEW)\n- **Trigger:** Heat index 105\u00b0F+\n- **Duration:** Expected to last 2+ days\n- **Action:** Full emergency response, reverse 911 calls\n\n### Extreme Heat Emergency (NEW)\n- **Trigger:** Heat index 115\u00b0F+ or multi-day 105\u00b0F+ event\n- **Action:** Mandatory cooling center openings, emergency shelters\n\n## Cooling Center Network (EXPANDED)\n- **Primary:** All public libraries daily (8 AM - 8 PM)\n- **Secondary:** 15 community centers and schools\n- **Emergency:** Convert recreation centers to 24-hour cooling shelters\n- **Capacity:** Space for 2,000+ people across all locations\n- **Transportation:** Free bus service to cooling centers\n- **Outreach:** Proactive outreach to homeless population\n\n## Vulnerable Population Protections\n- **Senior Check-Ins:** Daily wellness checks for registered seniors\n- **Homeless Services:** Water stations and emergency shelter\n- **Low-Income:** Emergency AC unit assistance program\n- **Outdoor Workers:** Mandatory breaks every 2 hours when 95\u00b0F+\n- **Utility Shutoff Ban:** No power shutoffs during heat emergencies\n\n## Public Communication\n- **Automatic Alerts:** CodeRED alerts automatic (no opt-in required)\n- **Multi-Language:** Alerts in English, Spanish, and Korean\n- **Social Media:** Real-time updates on all platforms\n- **Door Knocking:** Volunteers check on at-risk residents\n- **Mobile App:** New Athens Emergency app with push notifications\n\n## Supersedes Previous Guidance\n**CRITICAL UPDATE:** Previous guidance said \"drink extra water\" and suggested libraries as cooling centers only when above 95\u00b0F. This was INADEQUATE.\n\n**New baseline:** Any sustained heat above 95\u00b0F is dangerous and requires coordinated emergency response.\n\n## Health Warnings\n- Heat stroke can be fatal within 30 minutes\n- Elderly, children, and those with chronic conditions most at risk\n- Never leave children or pets in vehicles (even for \"just a minute\")\n- Heat exhaustion symptoms: dizziness, nausea, headache, rapid pulse\n- Heat stroke symptoms: confusion, loss of consciousness, hot/dry skin\n\n## Climate Adaptation\nThis updated guidance reflects the new normal of more frequent and severe heat events due to climate change. Athens must adapt our emergency response accordingly.\n\n**When in doubt, seek air conditioning. Heat kills.**\n",
+      "word_count": 406,
       "impact_score": 2
+    },
+    {
+      "id": "doc_8",
+      "label": "Vision Zero: Eliminating Traffic Deaths",
+      "date": "2024-08-15",
+      "content": "# Vision Zero: Eliminating Traffic Deaths\n**Date:** 2024-08-15\n**Department:** Transportation & Public Works\n**Author:** Director Michael Brown & Mayor's Office\n\n## Athens Commits to Vision Zero by 2030\n\n**Traffic deaths are preventable.** Athens commits to **eliminating all traffic fatalities and serious injuries by 2030**.\n\n## Current Crisis\n- **2023 Deaths:** 12 traffic fatalities (5-year high)\n- **Serious Injuries:** 145 serious injuries requiring hospitalization\n- **Pedestrian Deaths:** 6 of 12 deaths were pedestrians or cyclists\n- **High-Risk Areas:** Downtown, West Broad, Baxter Street corridors\n- **Vulnerable Users:** 70% of deaths involve pedestrians, cyclists, or motorcyclists\n\n## Vision Zero Principles\n- **Human Life Priority:** Safety above traffic flow and speed\n- **Systems Approach:** Design roads for human error tolerance\n- **Equity Focus:** Prioritize low-income and minority neighborhoods\n- **Data-Driven:** Use crash data to guide investments\n- **Safe Speeds:** Lower speeds save lives (every MPH matters)\n\n## Immediate Safety Interventions\n\n### Speed Reduction\n- **Downtown:** Reduce speed limits from 35 to 25 MPH\n- **Residential:** Lower from 30 to 20 MPH citywide\n- **School Zones:** Automated speed enforcement cameras\n- **Traffic Calming:** Speed humps, curb extensions, raised crosswalks\n- **Design:** Narrow lanes to psychologically encourage slower speeds\n\n### Protected Infrastructure\n- **Bike Lanes:** All bike lanes must be physically protected\n- **Sidewalks:** Fill 50 miles of missing sidewalk gaps\n- **Crosswalks:** Pedestrian refuge islands at all major crossings\n- **Bus Stops:** Protected bus boarding areas\n- **Trail Network:** Connect multi-use trails for car-free travel\n\n### Intersection Safety\n- **Leading Pedestrian Intervals:** Pedestrians get head start at signals\n- **No Turn on Red:** Ban right turns on red at 50 high-crash intersections\n- **Daylighting:** Remove parking near intersections for visibility\n- **All-Way Stop:** Convert dangerous intersections to all-way stops\n\n### Enforcement Shift\n- **Automated:** Speed and red-light cameras (not police stops)\n- **Equity:** Cameras deployed based on crash data, not revenue\n- **Education:** Warning period before citations\n- **Dangerous Behaviors:** Focus on speeding, red lights, DUI\n\n## Complete Streets Standard\nAll road projects must accommodate:\n- Protected bike lanes\n- Wide sidewalks (minimum 8 feet)\n- Street trees and buffers\n- Safe crossings every 300 feet\n- Transit priority lanes where applicable\n\n## Funding Reallocation\n- **Reduce:** Road widening projects cancelled\n- **Redirect:** $100M toward safety improvements\n- **New Sources:** Federal Safe Streets grants\n- **Parking Revenue:** Parking meters fund pedestrian safety\n\n## Contradicts Previous Plan\n**REVERSAL:** January 2024 Transportation Plan emphasized road widening and vehicle capacity. That approach INCREASES danger.\n\nVision Zero prioritizes people over cars. Speed kills. We choose life.\n\n## Community Engagement\n- Monthly community safety walks\n- Resident-identified dangerous locations\n- Youth voice in school route safety\n- Business district design input\n\n**Zero traffic deaths is achievable and non-negotiable.**\n",
+      "word_count": 449,
+      "impact_score": 2
+    },
+    {
+      "id": "doc_9",
+      "label": "Community Safety & Police Reform Initiative",
+      "date": "2024-09-10",
+      "content": "# Community Safety & Police Reform Initiative\n**Date:** 2024-09-10\n**Department:** Police Department & Community Safety\n**Author:** Police Chief Angela Martinez & Community Safety Task Force\n\n## Reimagining Public Safety in Athens\n\nComprehensive reform to build trust, improve outcomes, and create genuine community safety.\n\n## Reform Principles\n- **Community-First:** Safety created with communities, not imposed on them\n- **Accountability:** Transparent policies and consequences for misconduct\n- **De-escalation:** Mental health crisis response without armed police\n- **Prevention:** Invest in root causes (housing, mental health, jobs)\n- **Equity:** Address disparate impacts on communities of color\n\n## Structural Changes\n\n### Alternative Response Programs\n- **HEART Team:** Mental health professionals respond to mental health calls (not police)\n- **Community Responders:** Unarmed responders for non-violent calls\n- **Homeless Outreach:** Social workers for homelessness-related calls\n- **Youth Services:** Youth specialists (not police) for truancy and minor issues\n- **Target:** 40% of current police calls redirected to specialists\n\n### Use of Force Reforms\n- **Duty to Intervene:** Officers must stop excessive force by colleagues\n- **De-escalation Required:** De-escalation attempts mandatory before force\n- **Force Continuum:** Strict limits on force escalation\n- **Ban Chokeholds:** Prohibited in all circumstances\n- **Shooting at Vehicles:** Banned except imminent threat to life\n- **Warning Shots:** Prohibited\n- **Exhaust Options:** Officers must exhaust all alternatives before deadly force\n\n### Accountability Systems\n- **Civilian Review Board:** Independent board investigates complaints (binding authority)\n- **Body Cameras:** Mandatory activation for all police interactions\n- **Early Warning System:** Track officers with patterns of complaints\n- **Discipline Matrix:** Transparent, consistent consequences for violations\n- **Decertification:** Officers with serious violations lose police certification\n\n### Community Policing\n- **Beat Officers:** Officers assigned to neighborhoods (not rotating)\n- **Community Meetings:** Monthly community conversations in each neighborhood\n- **Youth Programs:** Officers mentor and support youth programs\n- **Business Partnerships:** Collaboration with local businesses\n- **Problem-Solving:** Address root causes, not just symptoms\n\n## Budget Reallocation\n- **Police Budget:** Reduce by 15% ($8M)\n- **Alternative Response:** $4M for HEART team and community responders\n- **Mental Health Services:** $2M for crisis intervention services\n- **Youth Programs:** $1M for after-school and job programs\n- **Affordable Housing:** $1M for housing-first homelessness program\n\n## Training Requirements\n- **De-escalation:** 40 hours annual training (up from 8 hours)\n- **Implicit Bias:** Mandatory annual training\n- **Mental Health First Aid:** All officers certified\n- **Cultural Competency:** Understanding diverse communities\n- **Trauma-Informed:** Recognize and respond to trauma\n\n## Transparency & Data\n- **Public Dashboard:** Real-time data on stops, arrests, use of force\n- **Demographic Data:** Track disparate impacts by race\n- **Complaint Data:** Public access to complaint investigations\n- **Body Camera Footage:** Timely release to public in critical incidents\n- **Annual Report:** Comprehensive public safety data and analysis\n\n## Community Investment\nSafety is created through:\n- Affordable housing\n- Quality education\n- Living-wage jobs\n- Mental health services\n- Youth development programs\n- Strong community ties\n\n## Opposition Expected\nSome fear reduced police budgets, but evidence shows:\n- Over-policing harms communities\n- Alternative responses more effective for many calls\n- Prevention more effective than punishment\n- Community trust improves actual safety\n\nAthens chooses a new path toward true community safety.\n",
+      "word_count": 517,
+      "impact_score": 1
+    },
+    {
+      "id": "doc_10",
+      "label": "Economic Development Strategic Plan 2024-2029",
+      "date": "2024-10-20",
+      "content": "# Economic Development Strategic Plan 2024-2029\n**Date:** 2024-10-20\n**Department:** Economic Development\n**Author:** Director Steven Park\n\n## Growing Athens' Economy and Job Base\n\nComprehensive strategy to **attract businesses, create jobs, and grow the tax base** for all Athenians.\n\n## Economic Development Priorities\n\n### Business Attraction Incentives\n- **Tax Abatement:** Up to 100% property tax abatement for 10 years\n- **Infrastructure:** City builds roads and utilities to business sites\n- **Fast Permits:** Guaranteed 15-day permit approval for major employers\n- **Workforce Training:** Free employee training programs\n- **Land Assembly:** City acquires and prepares sites for development\n\n## Target Industries\n- **Technology:** Software, data centers, tech startups ($100K+ salaries)\n- **Advanced Manufacturing:** Clean manufacturing and distribution ($65K+ salaries)\n- **Corporate Headquarters:** Relocate corporate offices to Athens\n- **Biotech/Life Sciences:** Leverage UGA research partnerships\n- **Tourism/Hospitality:** Hotels, restaurants, entertainment ($35K+ salaries)\n\n## Major Development Projects\n\n### Athens Technology Park (NEW)\n- **Location:** 500-acre site off Highway 316\n- **Investment:** $200M public infrastructure investment\n- **Incentives:** Full tax abatement, fast-track permitting\n- **Jobs:** 5,000 high-wage jobs projected\n- **Environmental:** Streamlined environmental review\n\n### Downtown Entertainment District\n- **Vision:** Bars, restaurants, live music, hotels\n- **Parking:** 2 new parking decks (1,500 spaces)\n- **Zoning:** Relaxed noise ordinances for entertainment\n- **Investment:** $50M public investment in infrastructure\n- **Jobs:** 1,500 hospitality and service jobs\n\n### Industrial Corridor Expansion\n- **Location:** Highway 78 industrial corridor\n- **Size:** 1,200 acres for warehouses and distribution\n- **Access:** Highway access and rail spur\n- **Jobs:** 3,000 manufacturing and warehouse jobs\n- **Investment:** $75M in roads and utilities\n\n## Business Climate Improvements\n- **Reduced Regulations:** Streamline permitting and inspections\n- **Lower Taxes:** Competitive property tax rates for businesses\n- **Right-to-Work:** Advocate for right-to-work status in Georgia\n- **Lawsuit Reform:** Support tort reform to reduce business liability\n- **Labor Pool:** Maintain low labor costs to attract employers\n\n## Workforce Development\n- **Technical Training:** Partner with technical college for job training\n- **High School Programs:** Career pathways in target industries\n- **Internships:** Connect students with local businesses\n- **Recruitment:** Regional recruitment campaigns for workers\n\n## Success Metrics\n- **Jobs Created:** 10,000 new jobs by 2029\n- **Average Salary:** Target $60,000 average for new jobs\n- **Tax Base Growth:** 25% increase in commercial property tax base\n- **Unemployment:** Reduce unemployment to below 3%\n- **Business Growth:** 500 new businesses\n\n## Trade-Offs Acknowledged\nEconomic growth requires:\n- Some environmental review streamlining\n- Competitive tax incentives (short-term revenue loss)\n- Infrastructure investment in growth areas\n- Flexible zoning for business needs\n- Maintaining competitive cost structure\n\n## Affordable Housing Connection\nEconomic growth creates affordability through:\n- More jobs = more residents can afford housing\n- Increased tax base = more revenue for services\n- Business tax revenue = less residential tax burden\n- Rising incomes = greater purchasing power\n\nA thriving economy benefits all Athenians through jobs, opportunity, and public services.\n",
+      "word_count": 474,
+      "impact_score": 4
+    },
+    {
+      "id": "doc_11",
+      "label": "Athens Green New Deal Resolution",
+      "date": "2024-11-25",
+      "content": "# Athens Green New Deal Resolution\n**Date:** 2024-11-25\n**Department:** City Council\n**Author:** City Council Resolution (7-3 vote)\n\n## Athens Green New Deal: Jobs, Justice, and Climate Action\n\nHistoric city council resolution committing Athens to a **Green New Deal** approach linking climate action with economic and racial justice.\n\n## Resolution Principles\n\n### Climate Justice\n- Climate change disproportionately harms low-income communities and communities of color\n- Solutions must center environmental justice and equity\n- Frontline communities must lead the transition\n- Repair historical environmental injustices\n- Ensure clean air, water, and green space for all neighborhoods\n\n### Economic Justice\n- Climate action creates good-paying union jobs\n- Just transition for workers in fossil fuel industries\n- Local hiring requirements for climate projects\n- Living wages ($20/hour minimum) for all green jobs\n- Worker ownership and cooperative models\n\n### Racial Justice\n- Address racist legacy of redlining and environmental racism\n- Prioritize investments in historically excluded neighborhoods\n- Diverse leadership in climate decision-making\n- Reparative justice through targeted investments\n- Community wealth building, not extraction\n\n## Commitments\n\n### Accelerated Climate Action (Reverses May cuts)\n- **Carbon Neutral:** 2028 target (2 years faster than original goal)\n- **Renewable Energy:** 100% by 2026\n- **Funding:** $350M over 7 years (increased from original $250M)\n- **Green Jobs:** 2,000 union jobs in climate sector by 2028\n\n### Transportation Transformation\n- **Free Public Transit:** Eliminate all bus fares (funded by progressive taxation)\n- **Bus Rapid Transit:** 3 BRT lines by 2027\n- **Bike Network:** 100 miles of protected bike lanes by 2028\n- **Pedestrian Priority:** Eliminate parking minimums, prioritize sidewalks\n- **Car-Free Zones:** Downtown car-free by 2027 except deliveries\n\n### Housing as a Human Right\n- **Public Housing:** Build 1,000 units of public housing (government-owned)\n- **Rent Control:** Strict rent control caps at 3% annual increases\n- **Tenant Protections:** Just cause eviction, right to counsel\n- **Vacant Property Tax:** Punitive tax on vacant speculation\n- **Community Land Trust:** 500 units in community ownership\n\n### Energy Democracy\n- **Municipal Utility:** Create city-owned renewable energy utility\n- **Rooftop Solar:** Free solar panels for all low-income households\n- **Community Solar:** Shared solar for renters and multifamily\n- **Energy Co-ops:** Support community energy cooperatives\n- **End Gas:** Ban all natural gas infrastructure citywide by 2026\n\n### Green Economy\n- **Worker Cooperatives:** Support and fund worker-owned businesses\n- **Community Benefits:** All incentives tied to union jobs and local hiring\n- **Buy Local:** Prioritize local businesses in procurement\n- **Cancel Bad Deals:** Review and cancel harmful economic development incentives\n- **Reparations Fund:** $10M fund for Black and Indigenous-led green businesses\n\n## Funding Mechanisms\n- **Progressive Taxation:** Higher property taxes on luxury properties ($1M+)\n- **Corporate Contribution:** Require large employers to fund climate transition\n- **Fossil Fuel Tax:** Tax on fossil fuel companies operating in Athens\n- **Wealth Tax:** Annual tax on property values over $5M\n- **Federal Grants:** Aggressive pursuit of federal climate funding\n- **Green Bonds:** $200M in municipal green bonds\n\n## Reverses Previous Policies\n**EXPLICIT REVERSALS:**\n- May 2024 climate budget cuts - REVERSED\n- January 2024 highway expansion - CANCELLED\n- March 2024 developer giveaways - REPEALED\n- October 2024 technology park incentives - UNDER REVIEW\n\n## Implementation\n- **Green New Deal Office:** New city department with 25 staff\n- **Community Oversight:** Community board with binding authority\n- **Annual Progress:** Mandatory annual progress reports\n- **Enforcement:** Penalties for city departments missing targets\n- **Public Input:** Quarterly town halls in all neighborhoods\n\n## Opposition Statement\nBusiness groups and developers oppose these policies as \"radical\" and \"job-killing.\"\n\nWe reject this false choice. **Climate action IS economic opportunity. Justice IS prosperity.**\n\n## Historic Vote\nAfter months of community organizing and testimony from hundreds of residents, Athens City Council voted 7-3 to adopt this resolution.\n\nAthens chooses a future of justice, sustainability, and shared prosperity.\n",
+      "word_count": 631,
+      "impact_score": 4
     }
   ],
   "edges": [
     {
       "source": "doc_1",
-      "target": "doc_5",
+      "target": "doc_6",
       "type": "updates",
-      "explanation": "Document 2 updates the budget and timeline outlined in Document 1.",
-      "similarity": 0.5899568927745491
+      "explanation": "Document 2 significantly revises and scales back the goals, budget, and initiatives outlined in Document 1, effectively updating the city's climate action plan due to budget constraints.",
+      "similarity": 0.8773781374663734
+    },
+    {
+      "source": "doc_2",
+      "target": "doc_7",
+      "type": "updates",
+      "explanation": "Document 2 specifically states that it supersedes previous guidance on extreme heat events from document 1, reflecting a revised approach due to climate change and increased heat threats.",
+      "similarity": 0.7474375585991517
+    },
+    {
+      "source": "doc_4",
+      "target": "doc_6",
+      "type": "contradicts",
+      "explanation": "Document 2 directly contradicts Document 1 by significantly reducing investments in public transit, bike lanes, and other environmentally friendly initiatives, effectively undermining the multimodal transportation network vision outlined in the earlier document.",
+      "similarity": 0.7301477184516899
+    },
+    {
+      "source": "doc_3",
+      "target": "doc_5",
+      "type": "contradicts",
+      "explanation": "Document 1 mandates affordable units in new developments, while Document 2 explicitly avoids such mandates, arguing that market-rate development will solve the housing problem.",
+      "similarity": 0.7198043412797457
+    },
+    {
+      "source": "doc_4",
+      "target": "doc_5",
+      "type": "contradicts",
+      "explanation": "Document 1 increases parking requirements, while Document 2 reduces them as incentives for housing development, creating a direct conflict in policy.",
+      "similarity": 0.7165432450339526
+    },
+    {
+      "source": "doc_6",
+      "target": "doc_11",
+      "type": "contradicts",
+      "explanation": "The Green New Deal Resolution explicitly reverses the climate budget cuts outlined in the Budget Reallocation document, setting more aggressive climate goals and funding levels.",
+      "similarity": 0.7047740792956884
+    },
+    {
+      "source": "doc_1",
+      "target": "doc_11",
+      "type": "updates",
+      "explanation": "The Athens Green New Deal Resolution (2024) revises and accelerates the goals and initiatives set forth in the Athens Climate Action Plan (2023), including earlier carbon neutrality and increased funding.",
+      "similarity": 0.7024543332170579
     },
     {
       "source": "doc_1",
       "target": "doc_4",
-      "type": "relates_to",
-      "explanation": "The Q1 retrospective is a follow-up on the Project Alpha kickoff, discussing progress and challenges faced in the first quarter.",
-      "similarity": 0.5396297557071543
+      "type": "contradicts",
+      "explanation": "The Transportation Master Plan prioritizes road expansion and car usage, directly contradicting the Climate Action Plan's goals of sustainable transportation and emissions reduction.",
+      "similarity": 0.6994936347497578
+    },
+    {
+      "source": "doc_3",
+      "target": "doc_10",
+      "type": "contradicts",
+      "explanation": "The Economic Development plan supports policies like streamlined environmental review and tax abatements that directly contradict the Affordable Housing Strategy's goals of community input, tenant protections, and investment in social programs, even though it attempts to rationalize the potential negative outcomes by pointing to increased revenue.",
+      "similarity": 0.6871837737320028
     },
     {
       "source": "doc_1",
       "target": "doc_3",
+      "type": "relates_to",
+      "explanation": "Both documents address strategic planning for the city of Athens, focusing on distinct but interconnected challenges: climate change and affordable housing.",
+      "similarity": 0.6833460221066063
+    },
+    {
+      "source": "doc_4",
+      "target": "doc_8",
       "type": "contradicts",
-      "explanation": "Document 2 contradicts Document 1 by recommending a change in the database from MongoDB to PostgreSQL due to performance issues that arose after the initial kickoff meeting.",
-      "similarity": 0.5342563472103934
+      "explanation": "Document 2 explicitly states that it contradicts Document 1 by reversing the focus on road widening and prioritizing safety over vehicle capacity.",
+      "similarity": 0.6712257215208595
+    },
+    {
+      "source": "doc_1",
+      "target": "doc_10",
+      "type": "contradicts",
+      "explanation": "The Climate Action Plan aims for environmental sustainability, while the Economic Development Strategic Plan prioritizes economic growth, potentially at the expense of environmental regulations and climate goals, such as streamlining environmental review for the Technology Park, and contradicting the carbon-neutral goal.",
+      "similarity": 0.6707654755292868
+    },
+    {
+      "source": "doc_2",
+      "target": "doc_6",
+      "type": "contradicts",
+      "explanation": "The first document outlines emergency preparedness plans, while the second significantly reduces funding for climate initiatives that could mitigate some of the emergencies (like extreme heat or flooding) the first document addresses, thus weakening the city's ability to respond to those events.",
+      "similarity": 0.6688584150269042
+    },
+    {
+      "source": "doc_2",
+      "target": "doc_9",
+      "type": "relates_to",
+      "explanation": "Both documents address public safety in Athens, but one focuses on emergency preparedness while the other outlines police reform and community safety initiatives.",
+      "similarity": 0.6621627555780176
     },
     {
       "source": "doc_2",
       "target": "doc_4",
       "type": "relates_to",
-      "explanation": "The Q1 retrospective references the security implementation mentioned in the security policy update.",
-      "similarity": 0.41740023167258
+      "explanation": "Both documents pertain to the city of Athens, Georgia, but focus on different aspects: emergency preparedness and transportation infrastructure, respectively, with some potential overlap in areas like evacuation routes and transportation for vulnerable populations.",
+      "similarity": 0.6599197706146902
     }
   ],
   "metadata": {
-    "total_documents": 5,
-    "total_relationships": 4,
+    "total_documents": 11,
+    "total_relationships": 15,
     "similarity_threshold": 0.4,
     "clusters": 1,
     "most_impactful": "doc_1"
@@ -82,47 +207,143 @@
     {
       "type": "contradiction",
       "nodes": [
-        "doc_1",
-        "doc_3"
+        "doc_4",
+        "doc_6"
       ],
-      "doc1_title": "Project Alpha - Kickoff",
-      "doc2_title": "Architecture Review - March",
-      "doc1_date": "2024-01-15",
-      "doc2_date": "2024-03-20",
-      "doc1_claim": "Database: MongoDB (document store)",
-      "doc2_claim": "The team now recommends migrating to PostgreSQL with proper indexing.",
-      "conflict_summary": "Document 1 states the project will use MongoDB, while Document 2 recommends migrating to PostgreSQL due to performance issues with MongoDB."
+      "doc1_title": "Athens Transportation Master Plan 2024",
+      "doc2_title": "Budget Reallocation: Climate Program Adjustments",
+      "doc1_date": "2024-01-25",
+      "doc2_date": "2024-05-20",
+      "doc1_claim": "Reduce from 12 routes to 8 most profitable routes",
+      "doc2_claim": "Postpone 3 new routes indefinitely",
+      "conflict_summary": "Document 1 discusses route reduction while document 2 discusses new route postponement, implying conflicting priorities in public transit investment."
+    },
+    {
+      "type": "contradiction",
+      "nodes": [
+        "doc_3",
+        "doc_5"
+      ],
+      "doc1_title": "Affordable Housing Strategy 2023-2028",
+      "doc2_title": "Market-Rate Housing Development Incentives",
+      "doc1_date": "2023-08-10",
+      "doc2_date": "2024-03-15",
+      "doc1_claim": "Require 15% affordable units in all new developments (Inclusionary Zoning).",
+      "doc2_claim": "No Mandates: Mandatory affordable units reduce development feasibility.",
+      "conflict_summary": "Document 1 mandates affordable units in new developments, while document 2 explicitly rejects mandates for affordable units, arguing they hinder development."
+    },
+    {
+      "type": "contradiction",
+      "nodes": [
+        "doc_4",
+        "doc_5"
+      ],
+      "doc1_title": "Athens Transportation Master Plan 2024",
+      "doc2_title": "Market-Rate Housing Development Incentives",
+      "doc1_date": "2024-01-25",
+      "doc2_date": "2024-03-15",
+      "doc1_claim": "Require 2 parking spaces per new housing unit",
+      "doc2_claim": "Reduce parking requirements by 30%",
+      "conflict_summary": "Document 1 mandates increased parking requirements while Document 2 reduces them."
+    },
+    {
+      "type": "contradiction",
+      "nodes": [
+        "doc_6",
+        "doc_11"
+      ],
+      "doc1_title": "Budget Reallocation: Climate Program Adjustments",
+      "doc2_title": "Athens Green New Deal Resolution",
+      "doc1_date": "2024-05-20",
+      "doc2_date": "2024-11-25",
+      "doc1_claim": "Climate Budget: Reduced from $250M to $75M (7-year total)",
+      "doc2_claim": "Funding: $350M over 7 years (increased from original $250M)",
+      "conflict_summary": "Document 1 reduces the climate budget to $75M, while Document 2 increases it to $350M."
+    },
+    {
+      "type": "contradiction",
+      "nodes": [
+        "doc_1",
+        "doc_4"
+      ],
+      "doc1_title": "Athens Climate Action Plan 2023-2030",
+      "doc2_title": "Athens Transportation Master Plan 2024",
+      "doc1_date": "2023-01-20",
+      "doc2_date": "2024-01-25",
+      "doc1_claim": "Athens commits to becoming a carbon-neutral city by 2030.",
+      "doc2_claim": "Highway Widening: Widen Highway 78 from 4 to 6 lanes",
+      "conflict_summary": "Document 1 pledges carbon neutrality while document 2 invests heavily in road expansion for cars, directly contradicting the carbon-neutrality goal."
     },
     {
       "type": "obsolete",
       "nodes": [
         "doc_1",
-        "doc_5"
+        "doc_6"
       ],
-      "obsolete_doc": "doc_5",
-      "obsolete_title": "Emergency Budget Meeting",
-      "obsolete_date": "2024-05-12",
+      "obsolete_doc": "doc_6",
+      "obsolete_title": "Budget Reallocation: Climate Program Adjustments",
+      "obsolete_date": "2024-05-20",
       "superseded_by": "doc_1",
-      "superseded_title": "Project Alpha - Kickoff",
-      "superseded_date": "2024-01-15",
-      "reason": "Document 2 updates the budget and timeline outlined in Document 1."
+      "superseded_title": "Athens Climate Action Plan 2023-2030",
+      "superseded_date": "2023-01-20",
+      "reason": "Document 2 significantly revises and scales back the goals, budget, and initiatives outlined in Document 1, effectively updating the city's climate action plan due to budget constraints."
+    },
+    {
+      "type": "obsolete",
+      "nodes": [
+        "doc_2",
+        "doc_7"
+      ],
+      "obsolete_doc": "doc_7",
+      "obsolete_title": "Updated Emergency Guidance: Extreme Heat Events",
+      "obsolete_date": "2024-06-30",
+      "superseded_by": "doc_2",
+      "superseded_title": "Athens Emergency Preparedness Plan",
+      "superseded_date": "2023-04-15",
+      "reason": "Document 2 specifically states that it supersedes previous guidance on extreme heat events from document 1, reflecting a revised approach due to climate change and increased heat threats."
+    },
+    {
+      "type": "obsolete",
+      "nodes": [
+        "doc_1",
+        "doc_11"
+      ],
+      "obsolete_doc": "doc_11",
+      "obsolete_title": "Athens Green New Deal Resolution",
+      "obsolete_date": "2024-11-25",
+      "superseded_by": "doc_1",
+      "superseded_title": "Athens Climate Action Plan 2023-2030",
+      "superseded_date": "2023-01-20",
+      "reason": "The Athens Green New Deal Resolution (2024) revises and accelerates the goals and initiatives set forth in the Athens Climate Action Plan (2023), including earlier carbon neutrality and increased funding."
     },
     {
       "type": "cluster",
       "nodes": [
         "doc_1",
-        "doc_5",
+        "doc_6",
         "doc_4",
+        "doc_5",
+        "doc_3",
+        "doc_10",
+        "doc_8",
         "doc_2",
-        "doc_3"
+        "doc_7",
+        "doc_9",
+        "doc_11"
       ],
-      "size": 5,
+      "size": 11,
       "documents": [
-        "Project Alpha - Kickoff",
-        "Emergency Budget Meeting",
-        "Q1 Retrospective",
-        "Security Policy Update",
-        "Architecture Review - March"
+        "Athens Climate Action Plan 2023-2030",
+        "Budget Reallocation: Climate Program Adjustments",
+        "Athens Transportation Master Plan 2024",
+        "Market-Rate Housing Development Incentives",
+        "Affordable Housing Strategy 2023-2028",
+        "Economic Development Strategic Plan 2024-2029",
+        "Vision Zero: Eliminating Traffic Deaths",
+        "Athens Emergency Preparedness Plan",
+        "Updated Emergency Guidance: Extreme Heat Events",
+        "Community Safety & Police Reform Initiative",
+        "Athens Green New Deal Resolution"
       ]
     }
   ]

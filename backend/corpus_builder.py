@@ -5,7 +5,7 @@ from markitdown import MarkItDown
 md = MarkItDown(docintel_endpoint="<document_intelligence_endpoint>")
 add_docs = []
 
-path = r"C:\ugahacks\data-alchemist\backend\test-files"
+path = r"C:\ugahacks\transmute\backend\test-files"
 
 # looping through each file and appending to array
 for e in os.scandir(path):

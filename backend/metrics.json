@@ -1,26 +1,26 @@
 {
   "summary": {
-    "total_documents": 5,
-    "total_words": 314,
-    "total_size_kb": 1.84
+    "total_documents": 11,
+    "total_words": 4485,
+    "total_size_kb": 26.28
   },
   "cognitive_load": {
-    "reduction_percent": 40.0,
-    "obsolete_docs": 1,
-    "duplicates": 0,
-    "contradictions": 1,
-    "total_problematic": 2
+    "reduction_percent": 81.8,
+    "obsolete_docs": 3,
+    "duplicates": 1,
+    "contradictions": 5,
+    "total_problematic": 9
   },
   "storage_savings": {
-    "total_savings_kb": 0.23,
-    "savings_percent": 12.7,
-    "obsolete_savings_kb": 0.23,
-    "duplicate_savings_kb": 0.0
+    "total_savings_kb": 6.8,
+    "savings_percent": 25.9,
+    "obsolete_savings_kb": 5.92,
+    "duplicate_savings_kb": 0.88
   },
   "knowledge_preservation": {
-    "relationships_discovered": 4,
+    "relationships_discovered": 15,
     "clusters_formed": 1,
-    "avg_connections_per_doc": 0.8
+    "avg_connections_per_doc": 1.4
   },
-  "impact_statement": "By automatically identifying 40% of documents as obsolete, duplicate, or contradictory, Data Alchemist reduces cognitive load for teams. It preserves 4 knowledge relationships while enabling 0.2 KB of storage optimization through smart archiving."
+  "impact_statement": "By automatically identifying 81% of documents as obsolete, duplicate, or contradictory, Transmute reduces cognitive load for teams. It preserves 15 knowledge relationships while enabling 6.8 KB of storage optimization through smart archiving."
 }

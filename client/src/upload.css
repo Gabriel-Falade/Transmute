@@ -376,3 +376,39 @@
     transform: translateY(0);
   }
 }
+
+/* Upload Status */
+.upload-status {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(147, 51, 234, 0.2);
+  border: 2px solid rgba(147, 51, 234, 0.5);
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease-out, gentlePulse 2s ease-in-out infinite;
+  text-align: center;
+}
+
+.upload-status p {
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Upload Error */
+.upload-error {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 77, 77, 0.2);
+  border: 2px solid rgba(255, 77, 77, 0.5);
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease-out;
+  text-align: center;
+}
+
+.upload-error p {
+  color: #ff4d4d;
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.1rem;
+}

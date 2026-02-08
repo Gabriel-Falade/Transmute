@@ -1,5 +1,5 @@
 """
-Data Alchemist - Document Ingestion
+Transmute - Document Ingestion
 Reads markdown files, generates embeddings, and creates documents.json
 """
 
@@ -119,7 +119,7 @@ def ingest_documents(data_folder="test-files"):
     return documents
 
 if __name__ == "__main__":
-    print("Data Alchemist - Document Ingestion")
+    print("Transmute - Document Ingestion")
     print("=" * 60)
 
     # Run ingestion

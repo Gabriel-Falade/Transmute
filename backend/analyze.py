@@ -1,5 +1,5 @@
 """
-Data Alchemist - Graph Analysis
+Transmute - Graph Analysis
 Extracts contradictions and detects obsolete documents
 """
 
@@ -150,7 +150,7 @@ def analyze_graph(max_contradictions=5):
     5. Add insights to graph
     """
 
-    print("Data Alchemist - Graph Analysis")
+    print("Transmute - Graph Analysis")
     print("=" * 60)
 
     # Load data

@@ -1,5 +1,5 @@
 """
-Data Alchemist - RAG Chatbot
+Transmute - RAG Chatbot
 Semantic search + LLM for document Q&A
 """
 
@@ -147,7 +147,7 @@ Please answer based on the context above."""
 
 # Test function
 if __name__ == "__main__":
-    print("\nData Alchemist - Chatbot Test")
+    print("\nTransmute - Chatbot Test")
     print("=" * 60)
 
     # Test questions

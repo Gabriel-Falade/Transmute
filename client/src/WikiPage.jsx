@@ -28,11 +28,24 @@ const WikiPage = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
-      setWikiContent(data.content);
+
+      if (data.error) {
+        console.error('Wiki generation error:', data.error);
+        setWikiContent(`# Error\n\n${data.error}\n\n**Troubleshooting:**\n- Make sure you have uploaded documents\n- Check that Gemini API key is configured in backend/.env\n- Ensure documents.json and graph.json exist in the backend folder`);
+      } else if (data.content) {
+        setWikiContent(data.content);
+      } else {
+        setWikiContent('# No Content\n\nWiki content is empty. Please upload documents first via the Upload page.');
+      }
     } catch (error) {
       console.error('Error generating wiki:', error);
-      setWikiContent('# Error\n\nCould not load wiki content.');
+      setWikiContent(`# Error\n\nCould not load wiki content: ${error.message}\n\n**Please ensure:**\n- Documents have been uploaded via the Upload page\n- Backend server is running on http://localhost:5000\n- Gemini API key is configured in backend/.env\n- documents.json and graph.json files exist`);
     } finally {
       setLoading(false);
     }
@@ -93,6 +106,27 @@ const WikiPage = () => {
     <div className="wiki-container">
       {/* Wiki Content */}
       <div className="wiki-content">
+        {/* Refresh Button */}
+        {!loading && (
+          <div style={{ textAlign: 'right', marginBottom: '1rem' }}>
+            <button
+              onClick={generateWiki}
+              style={{
+                padding: '0.5rem 1rem',
+                background: 'linear-gradient(135deg, #9333ea 0%, #7c3aed 100%)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontWeight: '600',
+                fontSize: '0.9rem'
+              }}
+            >
+              🔄 Regenerate Wiki
+            </button>
+          </div>
+        )}
+
         {loading ? (
           <div className="wiki-loading">
             <div className="spinner"></div>

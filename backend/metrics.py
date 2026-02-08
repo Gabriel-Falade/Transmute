@@ -1,5 +1,5 @@
 """
-Data Alchemist - Sustainability Metrics
+Transmute - Sustainability Metrics
 Calculates cognitive load reduction and storage savings
 """
 
@@ -54,7 +54,7 @@ def calculate_metrics():
     3. Estimate storage savings
     """
 
-    print("Data Alchemist - Sustainability Metrics")
+    print("Transmute - Sustainability Metrics")
     print("=" * 60)
 
     # Load data
@@ -194,7 +194,7 @@ def generate_impact_statement(cognitive_reduction, storage_savings, relationship
     """
     return (
         f"By automatically identifying {int(cognitive_reduction)}% of documents as obsolete, "
-        f"duplicate, or contradictory, Data Alchemist reduces cognitive load for teams. "
+        f"duplicate, or contradictory, Transmute reduces cognitive load for teams. "
         f"It preserves {relationships} knowledge relationships while enabling "
         f"{storage_savings:.1f} KB of storage optimization through smart archiving."
     )
